@@ -57,4 +57,4 @@ Proyek ini dibuat untuk pembelajaran dan UAS kuliah. Bebas digunakan dan dimodif
 - Email: mardiantoasep13@gmail.com
 
 ## DEMO
-- YouTube : https://youtu.be/m6HrQovTKU4?feature=shared
+- [YouTube](https://youtu.be/m6HrQovTKU4?feature=shared)
