@@ -1,6 +1,6 @@
-# 🎉 FavoritKu — Aplikasi Daftar Favorit dengan OOP Python + Flask
+# 🎉 MyFavorite — Aplikasi Daftar Favorit dengan OOP Python + Flask
 
-FavoritKu adalah aplikasi berbasis web yang dibuat menggunakan Python (Flask) dan menerapkan konsep Object-Oriented Programming (OOP) untuk mengelola dan menampilkan daftar favorit pengguna dalam tiga kategori utama: Fisikawan, Game, dan Film.
+MyFavorite adalah aplikasi berbasis web yang dibuat menggunakan Python (Flask) dan menerapkan konsep Object-Oriented Programming (OOP) untuk mengelola dan menampilkan daftar favorit pengguna dalam tiga kategori utama: Fisikawan, Game, dan Film.
 
 
 ## ✨ Fitur Utama
