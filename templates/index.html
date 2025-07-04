@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FavoritKu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --secondary: #f43f5e;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.dark {
+            --primary: #818cf8;
+            --primary-hover: #6366f1;
+            --dark: #0f172a;
+            --light: #1e293b;
+            --card-bg: #334155;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .toggle-mode {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toggle-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 44px;
+            height: 24px;
+            border-radius: 12px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 0 3px;
+            transition: var(--transition);
+        }
+
+        .toggle-btn::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            transition: var(--transition);
+        }
+
+        body.dark .toggle-btn::after {
+            transform: translateX(20px);
+        }
+
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 1.75rem;
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 15px 25px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: flex;
+            width: 150px;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-card i {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+
+        .search-button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-button:hover {
+            background: var(--primary-hover);
+        }
+
+        .add-button {
+            display: block;
+            margin: 0 auto 40px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-button:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 30px;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .file-input-container {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-button {
+            border: 1px dashed #e2e8f0;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .file-input-button:hover {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .file-input-button i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .file-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .submit-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-button:hover {
+            background: var(--primary-hover);
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .search-container {
+                padding: 0 15px;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+
+        #tentang-app {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            border-radius: 7px;
+            background-color: rgba(0, 0, 0, .9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        #tentang-app:target {
+            display: flex;
+
+        }
+
+        @keyframes anm {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #tentang-app .keterangan {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            width: 500px;
+            height: fit-content;
+            animation: anm 0.5s ease-in-out;
+            border-radius: 7px;
+        }
+
+        footer #desk {
+            background-color: white;
+            border-radius: 50%;
+            margin-left: 10px;
+            position: absolute;
+            bottom: 10px;
+            padding: 3px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>MyFavorite</h1>
+            <div class="toggle-mode">
+                <span id="mode-text">Mode Gelap</span>
+                <button class="toggle-btn" onclick="toggleDarkMode()"></button>
+            </div>
+        </div>
+    </header>
+
+    <div id="tentang-app">
+        <div class="keterangan">
+            <p class="desk">
+                MyFvorite adalah aplikasi sederhana berbasis web yang memungkinkan pengguna menyimpan dan menampilkan daftar favorit
+                pribadi seperti fisikawan, game, dan lukisan. Dengan tampilan yang modern dan mode gelap yang nyaman, aplikasi ini
+                dirancang untuk mencatat hal-hal yang kamu sukai dalam satu tempat secara visual dan interaktif.
+            </p>
+            <a href="#">X</a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>3 Kategori hal favorit</h2>
+            </div>
+
+            <div class="categories">
+                <a href="/kategori/Fisikawan" class="category-card">
+                    <i class="fas fa-atom"></i>
+                    <span>Fisikawan</span>
+                </a>
+                <a href="/kategori/Game" class="category-card">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Game</span>
+                </a>
+                <a href="/kategori/Film" class="category-card">
+                    <i class="fas fa-palette"></i>
+                    <span>Film</span>
+                </a>
+            </div>
+
+            <div class="search-container">
+                <form id="formCari" action="/cari" method="get">
+                    <input type="text" name="q" placeholder="Cari favorit..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <button class="add-button" onclick="toggleForm()">
+                <i class="fas fa-plus"></i>
+                <span>Tambah Favorit</span>
+            </button>
+
+            <div class="form-container" id="formTambah">
+                <form action="/tambah" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" id="nama" name="nama" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategori" class="form-label">Kategori</label>
+                        <select id="kategori" name="kategori" class="form-select" required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Fisikawan">Fisikawan</option>
+                            <option value="Game">Game</option>
+                            <option value="Film">Film</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea id="deskripsi" name="deskripsi" class="form-textarea" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Gambar</label>
+                        <div class="file-input-container">
+                            <div class="file-input-button">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Klik untuk mengunggah gambar</p>
+                                <p class="text-secondary" id="file-name">Format: JPG, PNG (Max 2MB)</p>
+                            </div>
+                            <input type="file" id="gambar" name="gambar" class="file-input" accept=".jpg,.jpeg,.png"
+                                required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <i class="fas fa-save"></i>
+                        Simpan Favorit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer><a href="#tentang-app" id="desk">❓</a></footer>
+
+    <div class="notification" id="notification">
+        Form berhasil ditampilkan!
+    </div>
+
+    <script>
+        // Toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark");
+            const modeText = document.getElementById("mode-text");
+
+            if (body.classList.contains("dark")) {
+                localStorage.setItem("darkMode", "enabled");
+                modeText.textContent = "Mode Terang";
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+                modeText.textContent = "Mode Gelap";
+            }
+        }
+
+        // Load dark mode preference
+        window.onload = function () {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.body.classList.add("dark");
+                document.getElementById("mode-text").textContent = "Mode Terang";
+            }
+
+            // File input display
+            const fileInput = document.getElementById("gambar");
+            const fileName = document.getElementById("file-name");
+
+            fileInput.addEventListener('change', function (e) {
+                if (this.files.length > 0) {
+                    fileName.textContent = this.files[0].name;
+                } else {
+                    fileName.textContent = "Format: JPG, PNG (Max 2MB)";
+                }
+            });
+        }
+
+        // Toggle form visibility
+        function toggleForm() {
+            const form = document.getElementById("formTambah");
+            const isHidden = form.style.display === "none" || form.style.display === "";
+
+            form.style.display = isHidden ? "block" : "none";
+
+            if (isHidden) {
+                showNotification("Form tambah favorit ditampilkan");
+            }
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.getElementById("notification");
+            notification.textContent = message;
+            notification.classList.add("show");
+
+            setTimeout(() => {
+                notification.classList.remove("show");
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

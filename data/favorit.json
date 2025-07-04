@@ -1,0 +1,74 @@
+[
+  {
+    "kategori": "Fisikawan",
+    "nama": "Nikola Tesla",
+    "deskripsi": "Nikola Tesla adalah penemu dan insinyur visioner kelahiran Serbia yang bekerja di Amerika Serikat. Ia terkenal karena mengembangkan sistem arus bolak-balik (AC), yang menjadi dasar distribusi listrik modern. Selain itu, ia juga mengembangkan berbagai inovasi seperti motor induksi, transformator Tesla coil, dan konsep komunikasi nirkabel jauh sebelum waktunya. Tesla adalah sosok eksentrik yang jenius, sering dianggap kurang dihargai pada masanya karena banyak idenya terlalu maju. Warisannya kini diakui luas, bahkan dijadikan nama untuk perusahaan mobil listrik ternama: Tesla Inc.",
+    "gambar": "nikola-tesla.jpg"
+  },
+  {
+    "kategori": "Fisikawan",
+    "nama": "Albert Einstein",
+    "deskripsi": "Albert Einstein adalah fisikawan teoretis kelahiran Jerman yang terkenal karena mengembangkan Teori Relativitas, khususnya Relativitas Umum, yang mengubah cara pandang manusia terhadap ruang, waktu, dan gravitasi. Ia juga mencetuskan persamaan ikonik E = MC², yang menunjukkan hubungan antara massa dan energi. Karyanya berpengaruh besar dalam pengembangan fisika modern, termasuk teori kuantum dan kosmologi. Ia menerima Hadiah Nobel Fisika tahun 1921, bukan untuk relativitas, melainkan untuk penjelasannya tentang efek fotolistrik yang menjadi dasar teknologi panel surya.",
+    "gambar": "albert-einstein.jpg"
+  },
+  {
+    "kategori": "Fisikawan",
+    "nama": "J Robert Oppenheimer",
+    "deskripsi": "J. Robert Oppenheimer adalah fisikawan asal Amerika Serikat yang dikenal luas sebagai pemimpin Proyek Manhattan, proyek rahasia yang berhasil mengembangkan bom atom pertama selama Perang Dunia II. Ia memainkan peran penting dalam sejarah sains dan militer modern. Setelah perang, Oppenheimer menjadi suara yang vokal dalam menyerukan pengendalian senjata nuklir, meski kemudian kehilangan akses keamanan akibat tuduhan simpati terhadap komunisme. Ia dikenang sebagai ilmuwan brilian dengan beban moral atas temuannya. Kutipan terkenalnya dari Bhagavad Gita, 'Now I am become Death, the destroyer of worlds', menggambarkan dilema etis yang ia rasakan.",
+    "gambar": "jr-oppenheimer.jpg"
+  },
+  {
+    "kategori": "Fisikawan",
+    "nama": "Erwin Schrodinger",
+    "deskripsi": "Erwin Schrodinger adalah fisikawan asal Austria yang merupakan salah satu pelopor mekanika kuantum. Ia terkenal dengan persamaan Schrodinger, yang menggambarkan perilaku gelombang partikel subatomik dan menjadi dasar teori kuantum. Schrodinger juga mencetuskan eksperimen pikiran terkenal 'Kucing Schrodinger', untuk menggambarkan paradoks superposisi kuantum di mana sesuatu bisa berada dalam dua keadaan sekaligus sampai diamati. Selain fisika, ia juga tertarik pada biologi dan filsafat, dan menulis buku What Is Life? yang memengaruhi lahirnya biologi molekuler",
+    "gambar": "erwin-schrodinger.jpg"
+  },
+  {
+    "kategori": "Game",
+    "nama": "GTA San Andreas",
+    "deskripsi": "Grand Theft Auto: San Andreas adalah game aksi-petualangan dunia terbuka buatan Rockstar Games. Pemain mengendalikan Carl 'CJ' Johnson, seorang mantan gangster yang kembali ke kampung halamannya di kota fiksi Los Santos setelah kematian ibunya. Game ini menyuguhkan eksplorasi bebas, misi cerita yang mendalam, serta elemen aksi seperti pertempuran senjata, mengemudi, dan pertarungan geng. Dirilis pertama kali pada tahun 2004, GTA: San Andreas dianggap salah satu game terbaik sepanjang masa karena kebebasan gameplay dan alur cerita yang kuat.",
+    "gambar": "GTA.jpg"
+  },
+  {
+    "kategori": "Game",
+    "nama": "Mobile Legends",
+    "deskripsi": "Mobile Legends adalah game MOBA (Multiplayer Online Battle Arena) populer yang dimainkan di perangkat mobile. Dalam game ini, dua tim berisi lima pemain bertarung untuk menghancurkan base lawan sambil mempertahankan wilayahnya sendiri. Setiap pemain memilih hero dengan peran berbeda seperti Tank, Mage, Assassin, dan Support. Game ini memiliki tempo cepat, strategi tim, dan grafis yang menarik. Sangat populer di Asia Tenggara, terutama di Indonesia, Mobile Legends memiliki komunitas e-sports yang besar dan aktif.",
+    "gambar": "ML.jpg"
+  },
+  {
+    "kategori": "Game",
+    "nama": "PUBG Mobile",
+    "deskripsi": "PUBG Mobile adalah game battle royale di mana hingga 100 pemain diterjunkan ke sebuah pulau dan bertarung untuk bertahan hidup. Pemain harus mencari senjata, kendaraan, dan perlengkapan lainnya sambil menghindari zona aman yang terus menyempit. Game ini menawarkan mode solo, duo, dan tim, dengan kombinasi antara taktik, skill menembak, dan keberuntungan. PUBG Mobile menjadi fenomena global karena intensitas permainannya dan pengalaman bertahan hidup yang realistis, dengan visual dan kontrol yang dioptimalkan untuk perangkat mobile.",
+    "gambar": "PUBGM.jpg"
+  },
+  {
+    "kategori": "Film",
+    "nama": "Avengers",
+    "deskripsi": "Avengers adalah film superhero dari Marvel Cinematic Universe (MCU) yang menyatukan beberapa pahlawan ikonik seperti Iron Man, Captain America, Thor, Hulk, Black Widow, dan Hawkeye untuk melawan ancaman global. Disutradarai oleh Joss Whedon (2012) dan kemudian Russo Brothers (untuk Infinity War dan Endgame), seri ini terkenal karena aksi spektakuler, humor khas Marvel, dan drama emosional antar karakter. Film Avengers: Endgame menjadi salah satu film dengan pendapatan tertinggi sepanjang sejarah.",
+    "gambar": "avengers.jpg"
+  },
+  {
+    "kategori": "Film",
+    "nama": "Interstellar",
+    "deskripsi": "Disutradarai oleh Christopher Nolan, Interstellar adalah film fiksi ilmiah yang mengisahkan tentang perjalanan luar angkasa untuk mencari planet baru yang layak huni, ketika Bumi mulai tidak bisa menopang kehidupan. Cerita berfokus pada Cooper, seorang mantan pilot NASA, yang melakukan perjalanan melalui lubang cacing (wormhole). Film ini menggabungkan sains teoretis seperti relativitas waktu dan gravitasi dengan drama emosional antara ayah dan anak. Visual luar angkasa yang memukau dan musik oleh Hans Zimmer membuat film ini sangat ikonik.",
+    "gambar": "interstellar.jpg"
+  },
+  {
+    "kategori": "Film",
+    "nama": "Oppenheimer",
+    "deskripsi": "Disutradarai oleh Christopher Nolan, Oppenheimer adalah film biografi epik yang mengisahkan kehidupan J. Robert Oppenheimer, fisikawan di balik pengembangan bom atom dalam Proyek Manhattan. Diperankan oleh Cillian Murphy, film ini mengeksplorasi konflik moral, tekanan politik, dan dampak sejarah dari senjata nuklir. Gaya penyutradaraan intens Nolan dan penggunaan efek praktis membuat film ini sangat dramatis, berpadu dengan sinematografi yang kuat dan musik latar karya Ludwig Goransson.",
+    "gambar": "OP.jpg"
+  },
+  {
+    "kategori": "Film",
+    "nama": "Doctor Strange",
+    "deskripsi": "Doctor Strange adalah film Marvel yang memperkenalkan Stephen Strange, seorang ahli bedah jenius yang kehilangan fungsi tangannya akibat kecelakaan. Dalam pencarian kesembuhan, ia menemukan dunia sihir dan dimensi alternatif, dan akhirnya menjadi Penyihir Agung yang melindungi realitas dari ancaman mistis. Disutradarai oleh Scott Derrickson, film ini menampilkan visual spektakuler seperti dimensi cermin dan manipulasi waktu, serta memperluas dunia MCU ke ranah kosmik dan magis.",
+    "gambar": "DS.jpg"
+  },
+  {
+    "kategori": "Film",
+    "nama": "SPIDERMAN",
+    "deskripsi": "Spider-Man adalah film superhero favorit saya yang menceritakan kisah Peter Parker, seorang remaja biasa yang mendapatkan kekuatan laba-laba setelah digigit oleh laba-laba radioaktif. Ia kemudian menggunakan kekuatannya untuk melindungi kota dari kejahatan, sambil menghadapi tantangan hidup sebagai remaja. Film ini penuh aksi, emosi, dan pesan moral tentang tanggung jawab: 'Dengan kekuatan besar, datang pula tanggung jawab besar.'",
+    "gambar": "SPIDERMAN.jpg"
+  }
+]
